@@ -50,8 +50,6 @@ Patients, doctors, and diagnostic centres interact through a secure, tamper-proo
 
 ## 📁 Project Structure
 
-```
-
 Med Chain/
 ├── Heart-Disease-Prediction/
 │   ├── heart_disease_app.py      # Flask API
