@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Heart Diseas Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons-->
+  <link href="../static/img/p4.png" rel="icon">
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!--  Vendor CSS Files -->
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> 
+
+  <link href="../static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+     <!-- <h1 class="logo me-auto"><a href="#">JS_DG</a></h1> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
+         <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
+          </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Heart Disease Detection Using ML</h1>
+          
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a id="proposedModelLink" 
+              href="{{ url_for('showgb', hhNumber=request.args.get('hhNumber', ''), patientAddress=request.args.get('patientAddress', '')) }}" 
+              class="btn-get-started scrollto">
+              Proposed Model
+            </a>
+            <!--
+            <a href="{{url_for('showrf')}}" class="btn-get-started scrollto">Random Forest Classifier</a>&nbsp&nbsp&nbsp&nbsp
+            <a href="{{url_for('showknn')}}" class="btn-get-started scrollto">KNN Classifier</a> -->
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 p4" data-aos="zoom-in" data-aos-delay="200">
+          <img src="../static/img/p4.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Our Project</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              We have developed Heart Disease Detection System using Machine Learning Algo's for prediction and Flask for backed
+              The main objective of this project is to predict the coronary artery heart disease of a person
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Proposed Model </li>
+              <!-- <li><i class="ri-check-double-line"></i> kneighborsclassifier</li>
+              <li><i class="ri-check-double-line"></i> random forest classifier</li> -->
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              The data science lifecycle is designed for big data issues and the data science projects. Generally, the data science project consists of seven steps which are problem definition,
+               data collection, data preparation, data exploration, data modeling, model evaluation and model deployment.
+
+              In this project, I will go through these steps in order to build a heart disease classifier. 
+              To build the heart disease classifier by using heart disease dataset from Kaggle.
+            </p>
+           <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+  
+    
+    <div style=" text-align: center;font-size: 12px;" class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Joshua</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#about">Joshua</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      console.log("✅ JavaScript Loaded!");
+        // Parse the URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        let hhNumber = params.get("hhNumber") || "";
+        let patientAddress = params.get("patientAddress") || localStorage.getItem("patientAddress") || "";
+
+
+        console.log("➡️ Extracted hhNumber:", hhNumber);
+        console.log("➡️ Extracted patientAddress:", patientAddress);
+        
+        // Retrieve the stored patient address from localStorage
+        let storedAddress = localStorage.getItem("patientAddress");
+  
+        // If no patient address is found in the URL, use the stored one
+        if (!patientAddress || !patientAddress.startsWith("0x")) {
+            patientAddress = storedAddress;
+        }
+        console.log("🛠️ Using stored patientAddress:", patientAddress);
+
+        // Update the "Proposed Model" link
+        const link = document.getElementById("proposedModelLink");
+        if (hhNumber && patientAddress) {
+          link.href = `/showgb?hhNumber=${hhNumber}&patientAddress=${patientAddress}`;
+          link.style.display = "inline-block"; // Ensure it is visible
+        } else {
+          console.warn("❌ Hiding Proposed Model Button: Missing hhNumber or patientAddress");
+          link.style.display = "none";
+        }
+    });
+  </script>
+  
+
+</body>
+
+</html>
