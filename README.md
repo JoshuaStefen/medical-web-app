@@ -1,9 +1,9 @@
-```markdown
+
 # Secure Medical Records Management Using Blockchain with ML-Based Heart Disease Prediction (2025)
 
 A full-stack medical records system built on a **private blockchain** with integrated **machine learning** for real-time heart disease prediction.  
 Patients, doctors, and diagnostic centres interact through a secure, tamper-proof, role-based platform where medical records and AI-generated health insights are stored with transparency and authenticity.
-
+```markdown
 ---
 
 ## 🚀 Features
