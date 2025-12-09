@@ -1,5 +1,3 @@
-# ✅ **FINAL README.md (Copy–Paste as-is into your repo)**
-
 ```markdown
 # Secure Medical Records Management Using Blockchain with ML-Based Heart Disease Prediction (2025)
 
@@ -151,8 +149,3 @@ Open: **[http://localhost:3000](http://localhost:3000)**
 
 **Joshua S (2025)**
 Master’s Thesis Project — Blockchain + Machine Learning Integrated Medical System
-
-
-
-Just tell me what you need.
-```
